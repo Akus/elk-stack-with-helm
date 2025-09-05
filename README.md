@@ -4,7 +4,7 @@ kubectl create namespace elk
 
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
-helm install elasticsearch bitnami/elasticsearch --namespace elk -f your-limits.yaml
+helm install elasticsearch bitnami/elasticsearch --namespace elk -f my_elk_limits_for_vagrant.yaml
 kubectl get pods --namespace elk -l app.kubernetes.io/name=elasticsearch
 helm install kibana bitnami/kibana \
   --namespace elk \
