@@ -1,0 +1,13 @@
+extraEnvVarsSecret: elasticsearch-password
+logstashPipeline:
+  logstash.conf: |
+    input { stdin { } }
+    output {
+      elasticsearch {
+        hosts => ["elasticsearch:9200"]
+        user => "elastic"
+        password => "${PASSWORD}"
+        index => "test"
+      }
+      stdout { }
+    }
