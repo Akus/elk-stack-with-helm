@@ -6,6 +6,9 @@ master:
     limits:
       memory: 2Gi
       cpu: 500m
+  extraEnvs:
+    - name: AWS_REGION
+      value: "eu-north-1"  
 data:
   resources:
     requests:
@@ -14,6 +17,9 @@ data:
     limits:
       memory: 2Gi
       cpu: 500m
+  extraEnvs:
+    - name: AWS_REGION
+      value: "eu-north-1"        
 ingest:
   resources:
     requests:
@@ -22,6 +28,9 @@ ingest:
     limits:
       memory: 1Gi
       cpu: 250m
+  extraEnvs:
+    - name: AWS_REGION
+      value: "eu-north-1"        
 coordinating:
   resources:
     requests:
@@ -30,4 +39,7 @@ coordinating:
     limits:
       memory: 1Gi
       cpu: 250m
+  extraEnvs:
+    - name: AWS_REGION
+      value: "eu-north-1"        
 replicas: 1
